@@ -5,7 +5,8 @@ let tentativas = 1;
 
 function exibirTextoNaTela(tag, texto) {  //função para puxar e exibir os textos na tela, tag, texto com o let campo puxando do HMTL
   let campo = document.querySelector(tag);
-  campo.innerHTML = texto; 
+  campo.innerHTML = texto; // exibi texto na tela
+  reponsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2}); // Serve como se fosse um narrador, puxado do script colocado no html, para narrar e ler tudo que foi escrito
 }
 
 function exibirMensagemInicial() { //função para exibir, mesma ideia da função acima
@@ -50,7 +51,7 @@ function gerarNumeraAleatorio() { // uma função para gerar um numero aleatorio
  if (listaDeNumerosSorteados.includes(numeroEscolhido)) { // função para exibir a lista no console, dos numeros que serão sorteados na rodada
     return gerarNumeraAleatorio();
  } else {
-    listaDeNumerosSorteados.push(numeroEscolhido);
+    listaDeNumerosSorteados.push(numeroEscolhido); // adicona um numero ao final da lista toda vez que ele é sorteado
     console.log(listaDeNumerosSorteados)
     return numeroEscolhido;
  }
@@ -68,3 +69,4 @@ function reiniciarJogo() { // função para reiniciar
   exibirMensagemInicial();
   document.getElementById("reiniciar").setAttribute("disabled", true);
 }
+
