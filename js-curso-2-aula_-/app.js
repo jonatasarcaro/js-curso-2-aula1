@@ -35,7 +35,7 @@ function verificarChute() { // verificarChute no html
     } else { // se não
       exibirTextoNaTela("p", "O número secreto é maior "); // exibe o testo na tela, "O número secreto é maior"
     }
-    tentativas++; // forma mais simples para declarar tentativas para não ficar repetitivo
+    tentativas++; // mesma coisa que tentativas = tentativas + 1
     LimparCampo(); // para o numero que ficou no campo de resposta não continuar lá depois de cada tentativa
   }
 }
